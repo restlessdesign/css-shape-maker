@@ -3,6 +3,7 @@
   <head>
     <title>CSS Shape Maker Demo</title>
     <link href="https://fonts.googleapis.com/css?family=Crimson Text|UnifrakturMaguntia" rel="stylesheet">
+    <meta charset="utf-8">
     <style>
       body {
         margin: 10vh 5vw;
@@ -11,8 +12,8 @@
       section > p:first-of-type::first-letter {
         font-family: 'UnifrakturMaguntia', serif;
         float: left;
-        font-size: 85px;
-        line-height: 70px;
+        font-size: 18rem;
+        line-height: 14rem;
         padding-top: 1rem;
         padding-right: 1rem;
         margin-right: -0.5rem;
@@ -32,7 +33,7 @@
   </head>
   <body>
     <section>
-      <img src="raven.png" class="image-shape">
+      <img src="raven.png" class="image-shape" id="shapeIt">
       <p>
         Ned frowned. “He must learn to face his fears. He will not be three
         forever. And winter is coming.”
@@ -41,9 +42,9 @@
         “Yes,” Catelyn agreed. The words gave her a chill, as they always did.
         The Stark words. Every noble house had its words. Family mottoes,
         touchstones, prayers of sorts, they boasted of honor and glory, promised
-        loyalty and truth, swore faith and courage. All but the Starks. Winter
-        is coming, said the Stark words. Not for the first time, she reflected
-        on what a strange people these northerners were.
+        loyalty and truth, swore faith and courage. All but the Starks.
+        <b>Winter is coming</b>, said the Stark words. Not for the first time,
+        she reflected on what a strange people these northerners were.
       </p>
       <p>
         “The man died well, I’ll give him that,” Ned said. He had a swatch of
@@ -52,6 +53,12 @@
         You would have been proud of Bran.”
       </p>
     </section>
-    <script src="shapemaker.js"></script>
+    <script>
+      document.getElementById('shapeIt').addEventListener('click', () => {
+        [].forEach.call(document.querySelectorAll('.image-shape'), (el) => {
+          el.style.shapeOutside = `url('${el.src}')`;
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Shape Maker Demo</title>
+    <link href="https://fonts.googleapis.com/css?family=Crimson Text|UnifrakturMaguntia" rel="stylesheet">
+    <style>
+      body {
+        margin: 10vh 5vw;
+      }
+
+      section > p:first-of-type::first-letter {
+        font-family: 'UnifrakturMaguntia', serif;
+        float: left;
+        font-size: 85px;
+        line-height: 70px;
+        padding-top: 1rem;
+        padding-right: 1rem;
+        margin-right: -0.5rem;
+      }
+
+      p {
+        font-family: 'Crimson Text', serif;
+        font-size: 1.8rem;
+        line-height: 1.4;
+      }
+
+      .image-shape {
+        float: right;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <img src="raven.png" class="image-shape">
+      <p>
+        Ned frowned. “He must learn to face his fears. He will not be three
+        forever. And winter is coming.”
+      </p>
+      <p>
+        “Yes,” Catelyn agreed. The words gave her a chill, as they always did.
+        The Stark words. Every noble house had its words. Family mottoes,
+        touchstones, prayers of sorts, they boasted of honor and glory, promised
+        loyalty and truth, swore faith and courage. All but the Starks. Winter
+        is coming, said the Stark words. Not for the first time, she reflected
+        on what a strange people these northerners were.
+      </p>
+      <p>
+        “The man died well, I’ll give him that,” Ned said. He had a swatch of
+        oiled leather in one hand. He ran it lightly up the greatsword as he
+        spoke, polishing the metal to a dark glow. “I was glad for Bran’s sake.
+        You would have been proud of Bran.”
+      </p>
+    </section>
+    <script src="shapemaker.js"></script>
+  </body>
+</html>
